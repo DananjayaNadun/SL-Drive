@@ -1,26 +1,114 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-shadow: var(--primary-shadow);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-shadow: var(--secondary-shadow);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-hover: var(--success-hover);
+  --color-success-shadow: var(--success-shadow);
+
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-danger-hover: var(--danger-hover);
+  --color-danger-shadow: var(--danger-shadow);
+
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  
+  --color-border: var(--border);
+
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #111827;
+
+    --primary: #1cb0f6;
+    --primary-foreground: #ffffff;
+    --primary-hover: #149edc;
+    --primary-shadow: #1899d6;
+
+    --secondary: #e5e7eb;
+    --secondary-foreground: #4b5563;
+    --secondary-hover: #d1d5db;
+    --secondary-shadow: #9ca3af;
+
+    --success: #58cc02;
+    --success-foreground: #ffffff;
+    --success-hover: #46a302;
+    --success-shadow: #58a700;
+
+    --danger: #ff4b4b;
+    --danger-foreground: #ffffff;
+    --danger-hover: #e34343;
+    --danger-shadow: #ea2b2b;
+
+    --card: #ffffff;
+    --card-hover: #f3f4f6;
+
+    --border: #e5e7eb;
+  }
+
+  .dark {
+    --background: #131f24;
+    --foreground: #ffffff;
+
+    --primary: #1cb0f6;
+    --primary-foreground: #ffffff;
+    --primary-hover: #149edc;
+    --primary-shadow: #1899d6;
+
+    --secondary: #202f36;
+    --secondary-foreground: #afb8be;
+    --secondary-hover: #293d46;
+    --secondary-shadow: #111a1f;
+
+    --success: #58cc02;
+    --success-foreground: #ffffff;
+    --success-hover: #46a302;
+    --success-shadow: #58a700;
+
+    --danger: #ff4b4b;
+    --danger-foreground: #ffffff;
+    --danger-hover: #e34343;
+    --danger-shadow: #ea2b2b;
+
+    --card: #131f24;
+    --card-hover: #202f36;
+
+    --border: #37464f;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary selection:text-primary-foreground;
+  }
+}
+
+@layer utilities {
+  .btn-push {
+    transform: translateY(4px);
+    box-shadow: none !important;
+  }
 }
