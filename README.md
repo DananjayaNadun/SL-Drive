@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sri Lankan Driving Exam Learner 🚗
 
-## Getting Started
+A modern, mobile-first web application designed to help Sri Lankan learner drivers study and pass their written driving exams with ease. Inspired by the sleek, gamified interface of Duolingo, this app makes learning road signs engaging and intuitive.
 
-First, run the development server:
+![Sri Lankan Driving Exam Learner](public/signs/sign_p1_0_0.png) <!-- Feel free to replace with an actual screenshot of the app -->
+
+## 🌟 Features
+
+- **Modern & Responsive UI**: Fully optimized for mobile phones (since most learners use mobile devices) using Next.js and Tailwind CSS.
+- **Dark & Light Mode**: Seamlessly switch between themes via an intuitive toggle.
+- **Three Learning Modes**:
+  - 📖 **Learning Mode**: Study mode that reveals the correct answer upon selection with detailed feedback.
+  - 🎮 **Quiz Mode**: Endless practice mode. Answers are constantly shuffled so you memorize the signs, not the pattern!
+  - ⏱️ **Mock Exam**: A realistic 40-question, 40-minute timed exam to simulate the real test environment.
+- **Sinhala Language Support**: Legacy Sinhala PDFs containing exam content were parsed, decoded into Unicode, and seamlessly integrated into the application.
+- **Score Tracking**: Integrated with Firebase to save exam and quiz scores!
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Components & Icons**: Radix UI primitives & Lucide React
+- **Animations**: Framer Motion
+- **Database**: [Firebase Firestore](https://firebase.google.com/)
+
+## 🚀 Getting Started
+
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/DananjayaNadun/sl-driving-exam-learner.git
+cd sl-driving-exam-learner
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+### Firebase Configuration
+
+To enable score tracking, you need to add your Firebase config. Open `src/lib/firebase.ts` and replace the placeholder variables with your actual Firebase project credentials:
+
+```env
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+# ... etc
+```
+
+### Run the Development Server
+
+Start the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/` - Application routes (Home, Learning, Quiz, Exam)
+- `src/components/` - Reusable UI components (Buttons, Cards, Progress Bars, ThemeProvider)
+- `src/lib/` - Utilities, data fetching logic, and Firebase initialization
+- `public/questions.json` - Parsed JSON database of Sinhala questions and answers
+- `public/signs/` - Extracted road sign images
 
-## Learn More
+## 🤝 Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/DananjayaNadun/sl-driving-exam-learner/issues).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open-source and available under the [MIT License](LICENSE).
