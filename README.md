@@ -25,39 +25,7 @@ A modern, mobile-first web application designed to help Sri Lankan learner drive
 - **Animations**: Framer Motion
 - **Database**: [Firebase Firestore](https://firebase.google.com/)
 
-## 🚀 Getting Started
 
-First, clone the repository to your local machine:
-
-```bash
-git clone https://github.com/DananjayaNadun/sl-driving-exam-learner.git
-cd sl-driving-exam-learner
-```
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Firebase Configuration
-
-To enable score tracking, you need to add your Firebase config. Open `src/lib/firebase.ts` and replace the placeholder variables with your actual Firebase project credentials:
-
-```env
-NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-# ... etc
-```
-
-### Run the Development Server
-
-Start the local development server:
-
-```bash
-npm run dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
