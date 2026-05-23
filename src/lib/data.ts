@@ -9,7 +9,8 @@ export interface Question {
 
 export async function getQuestions(): Promise<Question[]> {
   if (typeof window !== "undefined") {
-    const res = await fetch("/questions.json");
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    const res = await fetch(`${basePath}/questions.json`);
     if (!res.ok) throw new Error("Failed to fetch questions");
     const data: Question[] = await res.json();
     

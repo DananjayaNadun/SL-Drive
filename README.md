@@ -1,6 +1,6 @@
 # Sri Lankan Driving Exam Learner 🚗
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live_Website-success?style=for-the-badge&logo=vercel)](https://your-demo-website-link.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Website-success?style=for-the-badge&logo=github)](https://dananjayanadun.github.io/SL-Drive/)
 
 A modern, mobile-first web application designed to help Sri Lankan learner drivers study and pass their written driving exams with ease. Inspired by the sleek, gamified interface of Duolingo, this app makes learning road signs engaging and intuitive.
 

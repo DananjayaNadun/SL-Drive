@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: ['192.168.42.66', '*'],
+  output: 'export',
+  basePath: '/SL-Drive',
+  images: {
+    unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/SL-Drive',
+  },
   devIndicators: false,
 };
 
