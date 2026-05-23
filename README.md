@@ -26,9 +26,6 @@ A modern, mobile-first web application designed to help Sri Lankan learner drive
 - **Database**: [Firebase Firestore](https://firebase.google.com/)
 
 
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
-
 ## 📂 Project Structure
 
 - `src/app/` - Application routes (Home, Learning, Quiz, Exam)
