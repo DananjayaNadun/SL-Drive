@@ -19,6 +19,8 @@ export default function QuizMode() {
   const [loading, setLoading] = useState(true);
   const [score, setScore] = useState(0);
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   useEffect(() => {
     getQuestions().then((data) => {
       // Shuffle all
@@ -103,7 +105,7 @@ export default function QuizMode() {
         {currentQ.image && (
           <div className="bg-white p-4 rounded-3xl border-2 border-border inline-block shadow-sm">
             <Image
-              src={currentQ.image}
+              src={`${basePath}${currentQ.image}`}
               alt="Road sign"
               width={200}
               height={200}

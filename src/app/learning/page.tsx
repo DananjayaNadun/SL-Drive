@@ -16,6 +16,8 @@ export default function LearningMode() {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [loading, setLoading] = useState(true);
+  
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   useEffect(() => {
     getQuestions().then((data) => {
@@ -76,7 +78,7 @@ export default function LearningMode() {
         {currentQ.image && (
           <div className="bg-white p-4 rounded-3xl border-2 border-border inline-block shadow-sm">
             <Image
-              src={currentQ.image}
+              src={`${basePath}${currentQ.image}`}
               alt="Road sign"
               width={200}
               height={200}

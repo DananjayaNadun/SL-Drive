@@ -20,6 +20,8 @@ export default function ExamMode() {
   const [timeLeft, setTimeLeft] = useState(40 * 60); // 40 minutes for 40 questions
   const [isFinished, setIsFinished] = useState(false);
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   useEffect(() => {
     getQuestions().then((data) => {
       // Shuffle and pick 40
@@ -132,7 +134,7 @@ export default function ExamMode() {
         {currentQ.image && (
           <div className="bg-white p-4 rounded-3xl border-2 border-border inline-block shadow-sm">
             <Image
-              src={currentQ.image}
+              src={`${basePath}${currentQ.image}`}
               alt="Road sign"
               width={200}
               height={200}
