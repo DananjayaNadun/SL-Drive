@@ -1,12 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { BookOpen, HelpCircle, Trophy } from "lucide-react";
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <main className="flex flex-col items-center justify-center flex-1 py-10 space-y-8 max-w-lg mx-auto w-full">
       <div className="text-center space-y-4">
+        <div className="flex justify-center mb-2">
+          <Image
+            src={`${basePath}/logo.png`}
+            alt="Sri Lankan Driving Exam Learner Logo"
+            width={120}
+            height={120}
+            className="object-contain"
+          />
+        </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground tracking-tight">
           Sri Lankan Driving <span className="text-primary">Exam</span>
         </h1>
