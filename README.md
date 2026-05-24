@@ -4,7 +4,7 @@
 
 A modern, mobile-first web application designed to help Sri Lankan learner drivers study and pass their written driving exams with ease. Inspired by the sleek, gamified interface of Duolingo, this app makes learning road signs engaging and intuitive.
 
-![Sri Lankan Driving Exam Learner](public/banner.png)
+![Sri Lankan Driving Exam Learner Logo](public/logo.png)
 
 ## 🌟 Features
 
