@@ -46,6 +46,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 ## 👨‍💻 Author
 
 **Dananjaya Nadun**
+
 GitHub: (https://github.com/DananjayaNadun)
 
 ---
@@ -53,4 +54,3 @@ GitHub: (https://github.com/DananjayaNadun)
 ## ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub!
-
